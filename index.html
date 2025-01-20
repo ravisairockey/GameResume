@@ -5,48 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravi Sai Vigneswar - Portfolio</title>
     <style>
-        :root {
-            --primary-color: #4A90E2;
-            --secondary-color: #F5A623;
-            --background-color: #1e1e1e;
-            --text-color: #333;
-            --highlight-color: #50E3C2;
-            --font-family: 'Poppins', sans-serif;
-        }
-
         body {
-            font-family: var(--font-family);
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
+            background-color: #1e1e1e;
+            color: #fff;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            background: white;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #2c2c2c;
             display: grid;
             grid-template-columns: 1fr 2fr;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #444;
+            border-radius: 8px;
             overflow: hidden;
         }
 
         .sidebar {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 40px;
-            color: white;
+            background-color: #333;
+            padding: 20px;
+        }
+
+        .main {
+            padding: 20px;
         }
 
         .sidebar h1 {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #f9e3e3;
         }
 
-        .contact p, .skills ul li {
-            margin: 8px 0;
-            font-size: 16px;
+        .contact {
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin: 5px 0;
         }
 
         .skills ul {
@@ -54,44 +52,33 @@
             padding: 0;
         }
 
-        .main {
-            padding: 40px;
+        .skills li {
+            margin: 5px 0;
         }
 
         .main h2 {
-            font-size: 22px;
-            border-bottom: 3px solid var(--highlight-color);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-top: 20px;
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
         }
 
         .links a {
-            color: var(--primary-color);
-            font-weight: bold;
+            color: #ff6f61;
             text-decoration: none;
-            transition: all 0.3s;
+            transition: color 0.3s;
         }
 
         .links a:hover {
-            color: var(--secondary-color);
+            color: #ff9f8e;
         }
 
         .interactive {
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.2s;
         }
 
         .interactive:hover {
-            transform: translateY(-5px);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                text-align: center;
-            }
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -114,6 +101,12 @@
                     <li>Python</li>
                     <li>HTML, CSS, JavaScript</li>
                     <li>3D Modeling and Animation</li>
+                    <li>Blender, Maya</li>
+                    <li>Procedural Content Generation</li>
+                    <li>PCG Tool</li>
+                    <li>Visual Effects, Niagara</li>
+                    <li>Version Control (Git)</li>
+                    <li>Team Collaboration</li>
                 </ul>
             </div>
         </div>
@@ -121,7 +114,7 @@
         <div class="main">
             <div class="summary">
                 <h2>Professional Summary</h2>
-                <p>I am a passionate game developer skilled in creating immersive experiences using Unity, Unreal Engine, and web-based platforms.</p>
+                <p>I am a passionate game developer skilled in creating immersive experiences using Unity, Unreal Engine, and web-based platforms. As a Bachelor of Arts in Communication Design (Game Art and Design) student at Jain University, I combine technical expertise with creative design to develop innovative and engaging games.</p>
             </div>
 
             <div class="links">
@@ -132,7 +125,7 @@
 
             <div class="project">
                 <h2>Project</h2>
-                <p>3D Adventure Game: Developed a fully interactive 3D adventure game in Unity.</p>
+                <p>3D Adventure Game: Developed a fully interactive 3D adventure game in Unity. Designed and built a challenging Souls-like level inspired by Souls-like games. Procedural Map Generator: Designed a tool using PCG for creating procedural game maps in Unreal Engine.</p>
             </div>
 
             <div class="personal">
