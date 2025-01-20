@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravi Sai Vigneswar - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #333;
         }
 
         .container {
@@ -22,7 +22,7 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .sidebar {
@@ -31,13 +31,9 @@
             text-align: center;
         }
 
-        .main {
-            padding: 20px;
-        }
-
         .sidebar h1 {
             font-size: 28px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #333;
         }
 
@@ -46,10 +42,14 @@
             font-size: 18px;
         }
 
+        .contact i {
+            margin-right: 10px;
+            color: #007BFF;
+        }
+
         .skills ul {
             list-style: none;
             padding: 0;
-            text-align: left;
         }
 
         .skills li {
@@ -57,19 +57,22 @@
             font-size: 16px;
         }
 
+        .main {
+            padding: 20px;
+        }
+
         .main h2 {
             font-size: 22px;
             margin-top: 20px;
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
-            color: #555;
+            color: #007BFF;
         }
 
         .links a {
             color: #007BFF;
             text-decoration: none;
             transition: color 0.3s;
-            font-size: 18px;
         }
 
         .links a:hover {
@@ -83,46 +86,26 @@
         .interactive:hover {
             transform: scale(1.05);
         }
-
-        .icon {
-            margin-right: 10px;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .sidebar img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
     </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-            <img src="profile.jpg" alt="Profile Picture">
             <h1>RAVI SAI VIGNESWAR</h1>
             <div class="contact">
-                <p><i class="fas fa-envelope icon"></i>Email: ravisairockey2004@gmail.com</p>
-                <p><i class="fas fa-phone icon"></i>Phone: +91 7285994545</p>
-                <p><i class="fas fa-map-marker-alt icon"></i>Location: Bangalore, India 560064</p>
+                <p><i class="fas fa-envelope"></i>ravisairockey2004@gmail.com</p>
+                <p><i class="fas fa-phone"></i>+91 7285994545</p>
+                <p><i class="fas fa-map-marker-alt"></i>Bangalore, India 560064</p>
             </div>
             <div class="skills">
                 <h2>Skills</h2>
                 <ul>
-                    <li><i class="fas fa-gamepad icon"></i>Game Development</li>
-                    <li><i class="fas fa-code icon"></i>Unity, Unreal Engine, UEFN</li>
-                    <li><i class="fas fa-laptop-code icon"></i>Web Games</li>
-                    <li><i class="fas fa-terminal icon"></i>C#, C++</li>
-                    <li><i class="fas fa-code icon"></i>Python</li>
-                    <li><i class="fas fa-globe icon"></i>HTML, CSS, JavaScript</li>
-                    <li><i class="fas fa-cube icon"></i>3D Modeling and Animation</li>
-                    <li><i class="fas fa-tools icon"></i>Blender, Maya</li>
-                    <li><i class="fas fa-cogs icon"></i>Procedural Content Generation</li>
-                    <li><i class="fas fa-drafting-compass icon"></i>PCG Tool</li>
-                    <li><i class="fas fa-vial icon"></i>Visual Effects, Niagara</li>
-                    <li><i class="fas fa-code-branch icon"></i>Version Control (Git)</li>
+                    <li><i class="fas fa-gamepad"></i> Game Development</li>
+                    <li><i class="fas fa-cube"></i> Unity, Unreal Engine, UEFN</li>
+                    <li><i class="fas fa-code"></i> Web Games (HTML, CSS, JS)</li>
+                    <li><i class="fas fa-code-branch"></i> Version Control (Git)</li>
+                    <li><i class="fas fa-cogs"></i> Procedural Content Generation</li>
+                    <li><i class="fas fa-user-friends"></i> Team Collaboration</li>
                 </ul>
             </div>
         </div>
@@ -130,23 +113,18 @@
         <div class="main">
             <div class="summary">
                 <h2>Professional Summary</h2>
-                <p>I am a passionate game developer skilled in creating immersive experiences using Unity, Unreal Engine, and web-based platforms. As a Bachelor of Arts in Communication Design (Game Art and Design) student at Jain University, I combine technical expertise with creative design to develop innovative and engaging games.</p>
+                <p>I am a passionate game developer skilled in creating immersive experiences using Unity, Unreal Engine, and web-based platforms. Currently pursuing a Bachelor of Arts in Communication Design (Game Art and Design) at Jain University.</p>
             </div>
 
             <div class="links">
                 <h2>Websites, Portfolios, Profiles</h2>
-                <p><a href="https://github.com/ravisairockey" target="_blank" class="interactive"><i class="fab fa-github icon"></i>GitHub</a></p>
-                <p><a href="https://ravisairockey.github.io/RSV-Gamer-portfolio/" target="_blank" class="interactive"><i class="fas fa-globe icon"></i>Portfolio</a></p>
+                <p><a href="https://github.com/ravisairockey" target="_blank" class="interactive">GitHub</a></p>
+                <p><a href="https://ravisairockey.github.io/RSV-Gamer-portfolio/" target="_blank" class="interactive">Portfolio</a></p>
             </div>
 
             <div class="project">
                 <h2>Project</h2>
                 <p>3D Adventure Game: Developed a fully interactive 3D adventure game in Unity. Designed and built a challenging Souls-like level inspired by Souls-like games. Procedural Map Generator: Designed a tool using PCG for creating procedural game maps in Unreal Engine.</p>
-            </div>
-
-            <div class="personal">
-                <h2>Personal Information</h2>
-                <p>Title: Game Developer</p>
             </div>
 
             <div class="education">
