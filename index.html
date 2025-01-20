@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         .container {
@@ -21,11 +22,13 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar {
             background-color: #f9e3e3;
             padding: 20px;
+            text-align: center;
         }
 
         .main {
@@ -33,38 +36,40 @@
         }
 
         .sidebar h1 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 10px;
-        }
-
-        .contact {
-            margin-bottom: 20px;
+            color: #333;
         }
 
         .contact p {
-            margin: 5px 0;
+            margin: 10px 0;
+            font-size: 18px;
         }
 
         .skills ul {
             list-style: none;
             padding: 0;
+            text-align: left;
         }
 
         .skills li {
-            margin: 5px 0;
+            margin: 8px 0;
+            font-size: 16px;
         }
 
         .main h2 {
-            font-size: 20px;
+            font-size: 22px;
             margin-top: 20px;
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
+            color: #555;
         }
 
         .links a {
             color: #007BFF;
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 18px;
         }
 
         .links a:hover {
@@ -78,33 +83,46 @@
         .interactive:hover {
             transform: scale(1.05);
         }
+
+        .icon {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .sidebar img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
+            <img src="profile.jpg" alt="Profile Picture">
             <h1>RAVI SAI VIGNESWAR</h1>
             <div class="contact">
-                <p>Email: ravisairockey2004@gmail.com</p>
-                <p>Phone: +91 7285994545</p>
-                <p>Location: Bangalore, India 560064</p>
+                <p><i class="fas fa-envelope icon"></i>Email: ravisairockey2004@gmail.com</p>
+                <p><i class="fas fa-phone icon"></i>Phone: +91 7285994545</p>
+                <p><i class="fas fa-map-marker-alt icon"></i>Location: Bangalore, India 560064</p>
             </div>
             <div class="skills">
                 <h2>Skills</h2>
                 <ul>
-                    <li>Game Development</li>
-                    <li>Unity, Unreal Engine, UEFN</li>
-                    <li>Web Games</li>
-                    <li>C#, C++</li>
-                    <li>Python</li>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>3D Modeling and Animation</li>
-                    <li>Blender, Maya</li>
-                    <li>Procedural Content Generation</li>
-                    <li>PCG Tool</li>
-                    <li>Visual Effects, Niagara</li>
-                    <li>Version Control (Git)</li>
-                    <li>Team Collaboration</li>
+                    <li><i class="fas fa-gamepad icon"></i>Game Development</li>
+                    <li><i class="fas fa-code icon"></i>Unity, Unreal Engine, UEFN</li>
+                    <li><i class="fas fa-laptop-code icon"></i>Web Games</li>
+                    <li><i class="fas fa-terminal icon"></i>C#, C++</li>
+                    <li><i class="fas fa-code icon"></i>Python</li>
+                    <li><i class="fas fa-globe icon"></i>HTML, CSS, JavaScript</li>
+                    <li><i class="fas fa-cube icon"></i>3D Modeling and Animation</li>
+                    <li><i class="fas fa-tools icon"></i>Blender, Maya</li>
+                    <li><i class="fas fa-cogs icon"></i>Procedural Content Generation</li>
+                    <li><i class="fas fa-drafting-compass icon"></i>PCG Tool</li>
+                    <li><i class="fas fa-vial icon"></i>Visual Effects, Niagara</li>
+                    <li><i class="fas fa-code-branch icon"></i>Version Control (Git)</li>
                 </ul>
             </div>
         </div>
@@ -117,8 +135,8 @@
 
             <div class="links">
                 <h2>Websites, Portfolios, Profiles</h2>
-                <p><a href="https://github.com/ravisairockey" target="_blank" class="interactive">GitHub</a></p>
-                <p><a href="https://ravisairockey.github.io/RSV-Gamer-portfolio/" target="_blank" class="interactive">Portfolio</a></p>
+                <p><a href="https://github.com/ravisairockey" target="_blank" class="interactive"><i class="fab fa-github icon"></i>GitHub</a></p>
+                <p><a href="https://ravisairockey.github.io/RSV-Gamer-portfolio/" target="_blank" class="interactive"><i class="fas fa-globe icon"></i>Portfolio</a></p>
             </div>
 
             <div class="project">
