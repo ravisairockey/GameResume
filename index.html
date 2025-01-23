@@ -3,143 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravi Sai Vigneswar - Resume </title>
+    <title>Ravi Sai Vigneswar - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary-color-light: #4A90E2;
+            --secondary-color-light: #F5A623;
+            --background-color-light: #ecf0f1;
+            --text-color-light: #2c3e50;
+            --highlight-color-light: #50E3C2;
+
+            --primary-color-dark: #6A4FBF;
+            --secondary-color-dark: #FF6B6B;
+            --background-color-dark: #1E1E2F;
+            --text-color-dark: #EDEDED;
+            --highlight-color-dark: #FFC857;
+
+            --font-family: 'Poppins', sans-serif;
+            --black: #000000;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: #fff;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color-light);
+            color: var(--text-color-light);
+            line-height: 1.8;
+            padding: 20px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .light-mode {
+            background-color: var(--background-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        .light-mode .contact p,
+        .light-mode .summary p,
+        .light-mode .contact p i {
+            color: var(--black);
         }
 
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            background: #2c2c2c;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            border: 1px solid #444;
-            border-radius: 8px;
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
             overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
         }
 
-        .sidebar {
-            background-color: #333;
-            padding: 20px;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .main {
-            padding: 20px;
+        .header {
+            background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color-light));
+            padding: 60px;
+            color: white;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
         }
 
-        .sidebar h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #f9e3e3;
+        .light-mode .header {
+            background: linear-gradient(135deg, var(--primary-color-dark), var(--secondary-color-dark));
         }
 
-        .contact {
-            margin-bottom: 20px;
+        .header:hover {
+            transform: scale(1.02);
         }
 
-        .contact p {
-            margin: 5px 0;
+        .header h1 {
+            font-size: 36px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            border-bottom: 3px solid var(--highlight-color-light);
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            color: var(--primary-color-light);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .light-mode .section h2 {
+            border-bottom: 3px solid var(--highlight-color-dark);
+            color: var(--primary-color-dark);
         }
 
         .skills ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .skills li {
-            margin: 5px 0;
+        .skills ul li {
+            background: var(--secondary-color-light);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
         }
 
-        .main h2 {
-            font-size: 20px;
-            margin-top: 20px;
-            border-bottom: 2px solid #444;
-            padding-bottom: 5px;
+        .light-mode .skills ul li {
+            background: var(--secondary-color-dark);
         }
 
-        .links a {
-            color: #ff6f61;
-            text-decoration: none;
-            transition: color 0.3s;
+        .skills ul li:hover {
+            background: var(--highlight-color-light);
+            transform: scale(1.1);
         }
 
-        .links a:hover {
-            color: #ff9f8e;
+        .light-mode .skills ul li:hover {
+            background: var(--highlight-color-dark);
         }
 
-        .interactive {
-            transition: transform 0.2s;
+        .toggle-theme {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--primary-color-light);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
         }
 
-        .interactive:hover {
-            transform: scale(1.05);
+        .light-mode .toggle-theme {
+            background-color: var(--primary-color-dark);
+        }
+
+        .toggle-theme i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .toggle-theme:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .toggle-theme {
+                width: 40px;
+                height: 40px;
+                top: 10px;
+                right: 10px;
+            }
+
+            .toggle-theme i {
+                font-size: 1.2rem;
+            }
+
+            .header, .content {
+                padding: 30px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toggle-theme {
+                width: 35px;
+                height: 35px;
+                top: 8px;
+                right: 8px;
+            }
+
+            .toggle-theme i {
+                font-size: 1rem;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="toggle-theme" onclick="toggleTheme()">
+        <i id="theme-icon" class="fa fa-moon moon"></i>
+    </div>
+
     <div class="container">
-        <div class="sidebar">
+        <div class="header">
             <h1>RAVI SAI VIGNESWAR</h1>
-            <div class="contact">
-                <p>Email: ravisairockey2004@gmail.com</p>
-                <p>Phone: +91 7285994545</p>
-                <p>Location: Bangalore, India 560064</p>
+            <p>Game Developer | Unity & Unreal Engine Enthusiast</p>
+        </div>
+
+        <div class="content">
+            <div class="section contact">
+                <h2>Contact Information</h2>
+                <p><i class="fa fa-envelope"></i> Email: ravisairockey2004@gmail.com</p>
+                <p><i class="fa fa-phone"></i> Phone: +91 7285994545</p>
+                <p><i class="fa fa-map-marker-alt"></i> Location: Bangalore, India 560064</p>
             </div>
-            <div class="skills">
+
+            <div class="section skills">
                 <h2>Skills</h2>
                 <ul>
                     <li>Game Development</li>
-                    <li>Unity, Unreal Engine, UEFN</li>
+                    <li>Unity & Unreal Engine</li>
                     <li>Web Games</li>
-                    <li>C#, C++</li>
-                    <li>Python</li>
+                    <li>C#, C++, Python</li>
                     <li>HTML, CSS, JavaScript</li>
-                    <li>3D Modeling and Animation</li>
-                    <li>Blender, Maya</li>
-                    <li>Procedural Content Generation</li>
-                    <li>PCG Tool</li>
-                    <li>Visual Effects, Niagara</li>
-                    <li>Version Control (Git)</li>
-                    <li>Team Collaboration</li>
+                    <li>3D Modeling & Animation</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="main">
-            <div class="summary">
+            <div class="section summary">
                 <h2>Professional Summary</h2>
-                <p>I am a passionate game developer skilled in creating immersive experiences using Unity, Unreal Engine, and web-based platforms. As a Bachelor of Arts in Communication Design (Game Art and Design) student at Jain University, I combine technical expertise with creative design to develop innovative and engaging games.</p>
+                <p>Experienced game developer passionate about creating immersive experiences with a strong focus on gameplay, performance, and user engagement.</p>
             </div>
 
-            <div class="links">
-                <h2>Websites, Portfolios, Profiles</h2>
-                <p><a href="https://github.com/ravisairockey" target="_blank" class="interactive">GitHub</a></p>
-                <p><a href="https://ravisairockey.github.io/RSV-Gamer-portfolio/" target="_blank" class="interactive">Portfolio</a></p>
-            </div>
-
-            <div class="project">
-                <h2>Project</h2>
-                <p>3D Adventure Game: Developed a fully interactive 3D adventure game in Unity. Designed and built a challenging Souls-like level inspired by Souls-like games. Procedural Map Generator: Designed a tool using PCG for creating procedural game maps in Unreal Engine.</p>
-            </div>
-
-            <div class="personal">
-                <h2>Personal Information</h2>
-                <p>Title: Game Developer</p>
-            </div>
-
-            <div class="education">
-                <h2>Education</h2>
-                <p>Jain University, Bangalore</p>
-                <p>Expected: January 2025</p>
-                <p>Bachelor of Arts: Communication Design (Game Art and Design)</p>
+            <div class="section links">
+                <h2>Websites & Profiles</h2>
+                <p><a href="https://github.com/ravisairockey" target="_blank"><i class="fa fa-github"></i> GitHub</a></p>
+                <p><a href="https://ravisairockey.github.io/RSV-Gamer-portfolio/" target="_blank"><i class="fa fa-briefcase"></i> Portfolio</a></p>
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const icon = document.getElementById('theme-icon');
+            if (document.body.classList.contains('light-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+    </script>
 </body>
 </html>
